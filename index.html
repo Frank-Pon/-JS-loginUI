@@ -1,0 +1,81 @@
+<!DOCHTML>
+<html>
+    <head>
+        <title>
+            使用者登入介面
+        </title>
+        <style>
+            html, body {
+              height: 100%;
+              margin: 0;
+            }
+        
+            body {
+              display: flex;
+              justify-content: center; /* 水平置中 */
+              align-items: center;     /* 垂直置中 */
+              background-color: #f5f5f5;
+              font-family: sans-serif;
+            }
+        
+            .login-box {
+              background: white;
+              padding: 30px;
+              border-radius: 10px;
+              box-shadow: 0 0 15px rgba(0,0,0,0.1);
+              text-align: center;
+              width: 300px;
+            }
+        
+            input {
+              width: 100%;
+              padding: 10px;
+              margin: 8px 0;
+              border: 1px solid #ccc;
+              border-radius: 5px;
+              box-sizing: border-box;
+            }
+        
+            button {
+              width: 100%;
+              padding: 10px;
+              margin-top: 10px;
+              background-color: #3498db;
+              color: white;
+              border: none;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+        
+            button:hover {
+              background-color: #2980b9;
+            }
+        
+            #result {
+              margin-top: 10px;
+              font-weight: bold;
+            }
+            input {
+                display: block;
+                width: 100%;
+                padding: 10px;
+                margin: 35px 0; /* 控制上下距離 */
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                box-sizing: border-box;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="login-box">
+          <h1 id="title">登入介面</h1>
+          <input type="text" id="user" placeholder="請輸入帳號">
+          <input type="text" id="pw" placeholder="請輸入密碼">
+          <button id="login">登入</button>
+          <div id="result"></div>
+        </div>
+      
+        <script src="script.js"></script>
+      </body>
+      
+</html>
