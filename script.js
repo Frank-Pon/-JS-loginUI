@@ -4,6 +4,7 @@ const password = document.getElementById('pw');
 const result = document.getElementById('result');
 const butt = document.getElementById('login');
 const title = document.getElementById('title');
+const spinner = document.getElementById('spinner');
 butt.addEventListener('click',click);
 let is_Error = false;
 let log_success = false;
@@ -27,9 +28,11 @@ function click(){
     }
     
     if(account.value == user.username && password.value == user.pw){
+
         let dotcount = 0;
         result.style.color = 'grey';
         result.innerText = '登入中';
+        spinner.style.display = 'block';
         let loadinginterval = setInterval(()=>{
             dotcount = (dotcount+1) % 4;
             let dots='.'.repeat(dotcount);
@@ -41,6 +44,7 @@ function click(){
             dotcount = 0; 
             result.innerHTML = `${user.username} 登入成功!<br>歡迎您`;
             title.innerText = '登入成功';
+            spinner.style.display = 'none';
             title.style.color = 'green';
             result.style.color = 'green';
             account.style.display = 'none';
